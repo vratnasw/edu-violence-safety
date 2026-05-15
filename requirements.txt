@@ -1,0 +1,14 @@
+statsmodels
+linearmodels
+pysal
+spreg
+causalpy
+pandas
+pyarrow
+numpy
+scipy
+matplotlib
+seaborn
+geopandas
+boto3
+pyyaml

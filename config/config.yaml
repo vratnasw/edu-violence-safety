@@ -1,0 +1,15 @@
+# config.yaml -- Violence + safety pathway models — crime->absenteeism, E-Rate fuzzy RD. Model 20 + components of 6/18.
+
+r2:
+  bucket: edu-research-data
+  master_panel_key: processed/joined/master_panel.parquet
+
+training:
+  train_years: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+  val_years: [2023, 2024]
+
+data:
+  master_panel: processed/joined/master_panel.parquet
+  ca_doj_crime: processed/canonical/ca_doj_crime.parquet
+  fbi_ucr: processed/canonical/fbi_ucr.parquet
+  erate_disbursements: processed/canonical/erate_disbursements.parquet
