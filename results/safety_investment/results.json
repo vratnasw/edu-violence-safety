@@ -1,0 +1,136 @@
+{
+  "threshold_used": "pct_frl/enrollment >= 0.75 (proxy for E-Rate Category 1 discount tier AND federal Title I high-poverty cutoff; the actual E-Rate disbursement panel is not yet on R2)",
+  "running_variable": "frpl_share = pct_frl / enrollment",
+  "cutoff": 0.75,
+  "kernel": "triangular",
+  "polynomial_order": 1,
+  "estimator": "rdrobust",
+  "suspension_rd": {
+    "estimate": 27.373442328889325,
+    "ci": [
+      -101.59017469660438,
+      156.33705935438303
+    ],
+    "bandwidth": 0.08850457327341164,
+    "n_left": 1031,
+    "n_right": 825
+  },
+  "absenteeism_rd": {
+    "estimate": 5.731908100674389,
+    "ci": [
+      1.6170216907354744,
+      9.846794510613304
+    ],
+    "bandwidth": 0.03984070732190719,
+    "n_left": 389,
+    "n_right": 370
+  },
+  "suspension_full": {
+    "outcome": "suspension_rate_pct",
+    "estimate": 27.373442328889325,
+    "ci_95": [
+      -101.59017469660438,
+      156.33705935438303
+    ],
+    "se": 65.7989728600843,
+    "bandwidth": 0.08850457327341164,
+    "n_left": 1031,
+    "n_right": 825,
+    "primary": {
+      "estimator": "rdrobust",
+      "estimate": 27.373442328889325,
+      "se": 65.7989728600843,
+      "p_value": 0.6773981080637751,
+      "ci_95_lo": -101.59017469660438,
+      "ci_95_hi": 156.33705935438303,
+      "bandwidth": 0.08850457327341164,
+      "n_left": 1031,
+      "n_right": 825,
+      "spec": "primary"
+    },
+    "robustness": [
+      {
+        "estimator": "rdrobust",
+        "estimate": -39.55604070934669,
+        "se": 95.68283408074015,
+        "p_value": 0.6793077783638721,
+        "ci_95_lo": -227.09094944631903,
+        "ci_95_hi": 147.97886802762565,
+        "bandwidth": 0.04425228663670582,
+        "n_left": 506,
+        "n_right": 486,
+        "spec": "robustness",
+        "h_label": "half",
+        "h_mult": 0.5
+      },
+      {
+        "estimator": "rdrobust",
+        "estimate": 71.7584079626352,
+        "se": 44.58917366634872,
+        "p_value": 0.10754560875046536,
+        "ci_95_lo": -15.634766523810086,
+        "ci_95_hi": 159.15158244908048,
+        "bandwidth": 0.1770091465468233,
+        "n_left": 2056,
+        "n_right": 1240,
+        "spec": "robustness",
+        "h_label": "double",
+        "h_mult": 2.0
+      }
+    ]
+  },
+  "absenteeism_full": {
+    "outcome": "chronic_absenteeism_rate",
+    "estimate": 5.731908100674389,
+    "ci_95": [
+      1.6170216907354744,
+      9.846794510613304
+    ],
+    "se": 2.0994704200672123,
+    "bandwidth": 0.03984070732190719,
+    "n_left": 389,
+    "n_right": 370,
+    "primary": {
+      "estimator": "rdrobust",
+      "estimate": 5.731908100674389,
+      "se": 2.0994704200672123,
+      "p_value": 0.006330195293894148,
+      "ci_95_lo": 1.6170216907354744,
+      "ci_95_hi": 9.846794510613304,
+      "bandwidth": 0.03984070732190719,
+      "n_left": 389,
+      "n_right": 370,
+      "spec": "primary"
+    },
+    "robustness": [
+      {
+        "estimator": "rdrobust",
+        "estimate": 11.5505761324089,
+        "se": 3.2081365473915247,
+        "p_value": 0.00031772751313985,
+        "ci_95_lo": 5.262744042034835,
+        "ci_95_hi": 17.838408222782963,
+        "bandwidth": 0.019920353660953596,
+        "n_left": 191,
+        "n_right": 194,
+        "spec": "robustness",
+        "h_label": "half",
+        "h_mult": 0.5
+      },
+      {
+        "estimator": "rdrobust",
+        "estimate": 2.2162557472237268,
+        "se": 1.4918496962698502,
+        "p_value": 0.13739137046604763,
+        "ci_95_lo": -0.707715927812198,
+        "ci_95_hi": 5.140227422259652,
+        "bandwidth": 0.07968141464381438,
+        "n_left": 809,
+        "n_right": 634,
+        "spec": "robustness",
+        "h_label": "double",
+        "h_mult": 2.0
+      }
+    ]
+  }
+}

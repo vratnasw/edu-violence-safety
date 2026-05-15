@@ -1,0 +1,81 @@
+{
+  "treatment_source": "kidsdata_gang_arrest_rate_mean (kidsdata juvenile-arrest rate per 1k, county-year, broadcast to all districts in the county) \u2014 substituted for the originally-spec'd CA DOJ OpenJustice violent-crime panel, which is not yet available on R2",
+  "mediator": "kd_health_injury_injury_hospitalization_rate_mean",
+  "controls": [
+    "census_saipe_child_poverty_rate",
+    "bls_unemployment_rate"
+  ],
+  "spatial_weights_source": "edu-spatial-rl/results/spatiotemporal/edge_index.npy (row-normalized sparse W over 92 districts)",
+  "primary_outcome": "chronic_absenteeism_rate",
+  "crime_coef": 0.12919114964609965,
+  "crime_se": 0.07978374912054621,
+  "crime_p": 0.10543979795350378,
+  "n_obs": 7259,
+  "n_districts": 924,
+  "spatial_lag_coef": 0.06784682915373687,
+  "spatial_lag_se": 0.3051925172180367,
+  "spatial_lag_p": 0.824081071445153,
+  "prop_mediated_injury": -0.29096892429328014,
+  "mediation_detail": {
+    "n_obs": 7259,
+    "n_bootstrap": 500,
+    "direct_effect": -0.8027784908010613,
+    "indirect_effect": 0.18093665116070923,
+    "total_effect": -0.6218418396403574,
+    "prop_mediated": -0.29096892429328014
+  },
+  "baseline_fe": {
+    "outcome": "chronic_absenteeism_rate",
+    "n_obs": 7259,
+    "n_districts": 924,
+    "n_years": 8,
+    "rsq_within": -0.023628082685616558,
+    "treatment_coef": 0.12919114964609965,
+    "treatment_se": 0.07978374912054621,
+    "treatment_p": 0.10543979795350378,
+    "controls": {
+      "census_saipe_child_poverty_rate": {
+        "coef": -0.005786513524973992,
+        "se": 0.0335637198986257,
+        "p": 0.8631255851906787
+      },
+      "bls_unemployment_rate": {
+        "coef": -0.4940793076591564,
+        "se": 0.19214458460874,
+        "p": 0.010151661736584439
+      }
+    }
+  },
+  "spatial_fe": {
+    "outcome": "chronic_absenteeism_rate",
+    "n_obs": 7259,
+    "n_districts": 924,
+    "n_years": 8,
+    "rsq_within": -0.024724996942560695,
+    "treatment_coef": 0.12878269284127108,
+    "treatment_se": 0.0798655393744454,
+    "treatment_p": 0.1069044104577268,
+    "controls": {
+      "census_saipe_child_poverty_rate": {
+        "coef": -0.005731342564941097,
+        "se": 0.03361908048239286,
+        "p": 0.8646390106783253
+      },
+      "bls_unemployment_rate": {
+        "coef": -0.49477125844822684,
+        "se": 0.1923060536234476,
+        "p": 0.010109597765174616
+      }
+    },
+    "crime_spatial_lag_coef": 0.06784682915373687,
+    "crime_spatial_lag_se": 0.3051925172180367,
+    "crime_spatial_lag_p": 0.824081071445153
+  },
+  "secondary_outcome": {
+    "name": "suspension_rate_pct",
+    "crime_coef": 1.5552513361376121,
+    "crime_se": 1.4579808103972203,
+    "spatial_lag_coef": 6.2406479781038335,
+    "n_obs": 9478
+  }
+}

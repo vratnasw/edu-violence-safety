@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-05-15T19:13:12.056437+00:00",
+  "crime_absenteeism": {
+    "primary_outcome": "chronic_absenteeism_rate",
+    "crime_coef": 0.12919114964609965,
+    "crime_se": 0.07978374912054621,
+    "crime_p": 0.10543979795350378,
+    "crime_coef_per_10unit_rate_increase": 1.2919114964609966,
+    "spatial_spillover_coef": 0.06784682915373687,
+    "spatial_spillover_se": 0.3051925172180367,
+    "prop_mediated_injury": -0.29096892429328014,
+    "n_obs": 7259,
+    "n_districts": 924,
+    "treatment_source": "kidsdata_gang_arrest_rate_mean (kidsdata juvenile-arrest rate per 1k, county-year, broadcast to all districts in the county) \u2014 substituted for the originally-spec'd CA DOJ OpenJustice violent-crime panel, which is not yet available on R2",
+    "secondary_outcome": {
+      "name": "suspension_rate_pct",
+      "crime_coef": 1.5552513361376121,
+      "crime_se": 1.4579808103972203,
+      "spatial_lag_coef": 6.2406479781038335,
+      "n_obs": 9478
+    }
+  },
+  "safety_investment": {
+    "suspension_rd_estimate": 27.373442328889325,
+    "suspension_rd_ci": [
+      -101.59017469660438,
+      156.33705935438303
+    ],
+    "suspension_rd_bandwidth": 0.08850457327341164,
+    "absenteeism_rd_estimate": 5.731908100674389,
+    "absenteeism_rd_ci": [
+      1.6170216907354744,
+      9.846794510613304
+    ],
+    "absenteeism_rd_bandwidth": 0.03984070732190719,
+    "threshold_used": "pct_frl/enrollment >= 0.75 (proxy for E-Rate Category 1 discount tier AND federal Title I high-poverty cutoff; the actual E-Rate disbursement panel is not yet on R2)",
+    "estimator": "rdrobust"
+  }
+}
